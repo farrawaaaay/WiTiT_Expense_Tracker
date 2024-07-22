@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="995.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboardController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="995.0" layoutY="-1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/rxport.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="68.0" layoutY="79.0" opacity="0.9" prefHeight="556.0" prefWidth="859.0" style="-fx-background-radius: 20px; -fx-background-color: white;">
+         <effect>
+            <DropShadow height="37.46" offsetY="10.0" radius="17.637500000000003" spread="0.54" width="35.09">
+               <color>
+                  <Color opacity="0.5471124053001404" />
+               </color>
+               <input>
+                  <Blend />
+               </input>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane layoutX="114.0" layoutY="190.0" prefHeight="92.0" prefWidth="168.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="31.0" layoutY="7.0" prefHeight="17.0" prefWidth="98.0" stylesheets="@style.css" text="Total Expenses" textFill="#999898">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#fa6c52" layoutX="23.0" layoutY="15.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="17.0" layoutY="37.0" prefHeight="17.0" prefWidth="23.0" text="₱">
+                     <font>
+                        <Font name="Poppins Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalExpenses" layoutX="34.0" layoutY="37.0" prefHeight="35.0" prefWidth="113.0" text="0">
+                     <font>
+                        <Font name="Poppins Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="556.0" prefWidth="86.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52);">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="13.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Dashboard_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="recordPage" fitHeight="53.0" fitWidth="65.0" layoutX="15.0" layoutY="117.0" onMousePressed="#handleRecordPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Record_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="debtPage" fitHeight="53.0" fitWidth="65.0" layoutX="23.0" layoutY="203.0" onMousePressed="#handleDebtPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Debt_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="savingsPage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="292.0" onMousePressed="#handleSavingsPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Savings_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="walletPage" fitHeight="53.0" fitWidth="65.0" layoutX="24.0" layoutY="375.0" onMousePressed="#handleWalletPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Account_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="profilePage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="467.0" onMousePressed="#handleProfilePageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Profile_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow offsetX="5.0" spread="0.17">
+                     <color>
+                        <Color red="0.5263158082962036" green="0.5263158082962036" blue="0.5263158082962036" opacity="0.6200000047683716" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Label layoutX="128.0" layoutY="24.0" prefHeight="45.0" prefWidth="219.0" style="-fx-font-weight: Bold; -fx-font-size: 30; -fx-font-family: Poppins;" stylesheets="@style.css" text="Dashboard">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="117.0" layoutY="74.0" prefHeight="101.0" prefWidth="351.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="31.0" layoutY="7.0" prefHeight="17.0" prefWidth="98.0" stylesheets="@style.css" text="Current Money" textFill="#999898">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#fa6c52" layoutX="22.0" layoutY="16.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="29.0" layoutY="28.0" text="₱">
+                     <font>
+                        <Font name="Poppins Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CurrentMoney" layoutX="57.0" layoutY="28.0" prefHeight="52.0" prefWidth="264.0" text="add to wallet">
+                     <font>
+                        <Font name="Poppins Bold" size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="112.0" layoutY="299.0" prefHeight="221.0" prefWidth="720.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="18.0" layoutY="11.0" prefHeight="17.0" prefWidth="98.0" stylesheets="@style.css" text="Activity Log">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="ActivityLog" layoutX="16.0" layoutY="32.0" prefHeight="178.0" prefWidth="684.0">
+                    <columns>
+                      <TableColumn fx:id="TransactionColumn" prefWidth="148.80003356933594" text="Transaction" />
+                      <TableColumn fx:id="AccountColumn" prefWidth="167.20001220703125" text="Account" />
+                        <TableColumn fx:id="AmountColumn" prefWidth="207.20001220703125" text="Amount" />
+                        <TableColumn fx:id="DateColumn" prefWidth="162.4000244140625" text="Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="299.0" layoutY="190.0" prefHeight="92.0" prefWidth="168.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="27.0" layoutY="7.0" prefHeight="17.0" prefWidth="98.0" stylesheets="@style.css" text="Borrowed" textFill="#999898">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#fa6c52" layoutX="18.0" layoutY="16.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Label layoutX="15.0" layoutY="34.0" prefHeight="17.0" prefWidth="23.0" text="₱">
+                     <font>
+                        <Font name="Poppins Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalBorrowed" layoutX="31.0" layoutY="34.0" prefHeight="35.0" prefWidth="113.0" text="0">
+                     <font>
+                        <Font name="Poppins Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fx:id="profilePic" fitHeight="53.0" fitWidth="63.0" layoutX="769.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane layoutX="490.0" layoutY="71.0" prefHeight="212.0" prefWidth="329.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="27.0" layoutY="7.0" prefHeight="17.0" prefWidth="139.0" stylesheets="@style.css" text="Current Savings" textFill="#999898">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#fa6c52" layoutX="18.0" layoutY="16.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <TableView fx:id="currentSavingsTable" layoutX="19.0" layoutY="30.0" prefHeight="164.0" prefWidth="290.0">
+                    <columns>
+                      <TableColumn fx:id="goalColumn" prefWidth="87.20001220703125" style="-fx-background-color: #ffcf87;" text="Goal" />
+                      <TableColumn fx:id="targetAmountColumn" prefWidth="100.800048828125" style="-fx-background-color: #faf2a0;" text="Target Amount" />
+                        <TableColumn fx:id="currentSavedColumn" prefWidth="102.4000244140625" style="-fx-background-color: #ffcf87;" text="Current Saved" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <ImageView fx:id="profileIcon" fitHeight="45.0" fitWidth="54.0" layoutX="758.0" layoutY="24.0" pickOnBounds="true">
+               <image>
+                  <Image url="@uploads/default_profile.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userName" alignment="CENTER_RIGHT" layoutX="567.0" layoutY="38.0" prefHeight="20.0" prefWidth="180.0" text="Name">
+               <font>
+                  <Font name="Poppins Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

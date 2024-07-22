@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="995.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="debtController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="995.0" layoutY="-1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/rxport.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="68.0" layoutY="79.0" opacity="0.9" prefHeight="556.0" prefWidth="859.0" style="-fx-background-radius: 20px; -fx-background-color: white;">
+         <effect>
+            <DropShadow height="37.46" offsetY="10.0" radius="17.637500000000003" spread="0.54" width="35.09">
+               <color>
+                  <Color opacity="0.5471124053001404" />
+               </color>
+               <input>
+                  <Blend />
+               </input>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane prefHeight="556.0" prefWidth="86.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52);">
+               <children>
+                  <ImageView fx:id="dashboardPage" fitHeight="53.0" fitWidth="65.0" layoutX="13.0" layoutY="29.0" onMousePressed="#handleDashboardPageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Dashboard_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="recordPage" fitHeight="53.0" fitWidth="65.0" layoutX="15.0" layoutY="117.0" onMousePressed="#handleRecordPageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Record_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="23.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Debt_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="savingsPage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="292.0" onMousePressed="#handleSavingsPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Savings_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="walletPage" fitHeight="53.0" fitWidth="65.0" layoutX="24.0" layoutY="375.0" onMousePressed="#handleWalletPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Account_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="profilePage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="467.0" onMousePressed="#handleProfilePageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Profile_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow offsetX="5.0" spread="0.17">
+                     <color>
+                        <Color red="0.5263158082962036" green="0.5263158082962036" blue="0.5263158082962036" opacity="0.6200000047683716" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Label layoutX="116.0" layoutY="24.0" prefHeight="45.0" prefWidth="219.0" style="-fx-font-weight: Bold; -fx-font-size: 30; -fx-font-family: Poppins;" stylesheets="@style.css" text="Debt">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="122.0" layoutY="89.0" prefHeight="453.0" prefWidth="708.0" style="-fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52); -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="23.0" layoutY="54.0" prefHeight="37.0" prefWidth="123.0" text="Lend To:" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="116.0" prefHeight="37.0" prefWidth="149.0" text="Lent Amount:" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lendTo" layoutX="39.0" layoutY="93.0" prefHeight="25.0" prefWidth="219.0" />
+                  <TextField fx:id="lentAmount" layoutX="39.0" layoutY="153.0" prefHeight="25.0" prefWidth="219.0" />
+                  <Pane layoutX="319.0" layoutY="33.0" prefHeight="387.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <ComboBox fx:id="chooseDebt" layoutX="95.0" layoutY="13.0" prefWidth="150.0" promptText="Select Debt" style="-fx-background-color: #fac228;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="296.0" layoutX="22.0" layoutY="55.0" stroke="#dc913c" strokeType="INSIDE" style="-fx-arc-width: 20;" width="302.0">
+                           <effect>
+                              <DropShadow height="35.04" radius="13.51" spread="0.48">
+                                 <color>
+                                    <Color red="0.75789475440979" green="0.5377309918403625" blue="0.24982456862926483" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Rectangle>
+                        <Label layoutX="80.0" layoutY="84.0" prefHeight="27.0" prefWidth="173.0" style="-fx-alignment: center;" text="Name:">
+                           <font>
+                              <Font name="Poppins Bold" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9882352948188782" green="0.7647058963775635" blue="0.14901961386203766" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9803921580314636" green="0.42352941632270813" blue="0.32156863808631897" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="156.0" prefHeight="27.0" prefWidth="235.0" style="-fx-alignment: center;" text="Remaining to Pay:">
+                           <font>
+                              <Font name="Poppins Bold" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9882352948188782" green="0.7647058963775635" blue="0.14901961386203766" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9803921580314636" green="0.42352941632270813" blue="0.32156863808631897" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="debtRemainingBalance" contentDisplay="CENTER" layoutX="44.0" layoutY="184.0" prefHeight="32.0" prefWidth="250.0" style="-fx-alignment: center;">
+                           <font>
+                              <Font name="Poppins Bold" size="22.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9882352948188782" green="0.7647058963775635" blue="0.14901961386203766" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9803921580314636" green="0.42352941632270813" blue="0.32156863808631897" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="86.0" layoutY="180.0" prefHeight="36.0" prefWidth="24.0" style="-fx-alignment: center;" text="₱">
+                           <font>
+                              <Font name="Poppins Bold" size="25.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9882352948188782" green="0.7647058963775635" blue="0.14901961386203766" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9803921580314636" green="0.42352941632270813" blue="0.32156863808631897" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label layoutX="51.0" layoutY="220.0" prefHeight="27.0" prefWidth="235.0" style="-fx-alignment: center;" text="Amount Paid:">
+                           <font>
+                              <Font name="Poppins Bold" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9882352948188782" green="0.7647058963775635" blue="0.14901961386203766" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9803921580314636" green="0.42352941632270813" blue="0.32156863808631897" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <TextField fx:id="debtPayAmount" layoutX="76.0" layoutY="286.0" />
+                        <Button fx:id="debtPaid" layoutX="235.0" layoutY="253.0" mnemonicParsing="false" onAction="#debtPaid" prefHeight="53.0" prefWidth="48.0" style="-fx-background-color: #fa6c52;" stylesheets="@style.css" text="PAY" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ComboBox fx:id="chooseDebtName" layoutX="98.0" layoutY="116.0" prefWidth="150.0" promptText="Select Name" style="-fx-background-color: #fac228;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="selectAccountPayment" layoutX="76.0" layoutY="253.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Account" style="-fx-background-color: #fa6c52;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Pane>
+                  <Label layoutX="65.0" layoutY="25.0" prefHeight="37.0" prefWidth="163.0" style="-fx-alignment: center;" text="LEND" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="227.0" prefHeight="37.0" prefWidth="250.0" style="-fx-alignment: center;" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="316.0" prefHeight="37.0" prefWidth="202.0" text="Borrowed Amount:" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="borrowedAmount" layoutX="39.0" layoutY="352.0" prefHeight="25.0" prefWidth="219.0" />
+                  <Button fx:id="submitBtn" layoutX="198.0" layoutY="190.0" mnemonicParsing="false" onAction="#saveLend" style="-fx-background-color: #fa6c52;" stylesheets="@style.css" text="LEND" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="submitBtn1" layoutX="176.0" layoutY="386.0" mnemonicParsing="false" onAction="#saveBorrow" style="-fx-background-color: #fcc326;" stylesheets="@style.css" text="BORROW" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="23.0" layoutY="255.0" prefHeight="37.0" prefWidth="132.0" text="Borrow From:" textFill="WHITE">
+                     <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="borrowFrom" layoutX="38.0" layoutY="292.0" prefHeight="25.0" prefWidth="219.0" />
+                  <ComboBox fx:id="selectAccountLend" layoutX="39.0" layoutY="192.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Account" style="-fx-background-color: #fa6c52;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+                  <ComboBox fx:id="selectAccountBorrow" layoutX="39.0" layoutY="388.0" prefHeight="25.0" prefWidth="132.0" promptText="Select Account" style="-fx-background-color: #fac228;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ComboBox>
+               </children>
+            </Pane>
+            <Label fx:id="userName" alignment="CENTER_RIGHT" layoutX="567.0" layoutY="38.0" prefHeight="20.0" prefWidth="180.0" text="Name">
+               <font>
+                  <Font name="Poppins Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileIcon" fitHeight="45.0" fitWidth="54.0" layoutX="758.0" layoutY="24.0" pickOnBounds="true">
+               <image>
+                  <Image url="@uploads/default_profile.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

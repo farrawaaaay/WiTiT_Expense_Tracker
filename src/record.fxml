@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="995.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recordController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="995.0" layoutY="-1.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/rxport.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="68.0" layoutY="79.0" opacity="0.9" prefHeight="556.0" prefWidth="859.0" style="-fx-background-radius: 20px; -fx-background-color: white;">
+         <effect>
+            <DropShadow height="37.46" offsetY="10.0" radius="17.637500000000003" spread="0.54" width="35.09">
+               <color>
+                  <Color opacity="0.5471124053001404" />
+               </color>
+               <input>
+                  <Blend />
+               </input>
+            </DropShadow>
+         </effect>
+         <children>
+            <Pane prefHeight="556.0" prefWidth="86.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52);">
+               <children>
+                  <ImageView fx:id="dashboardPage" fitHeight="53.0" fitWidth="65.0" layoutX="13.0" layoutY="29.0" onMousePressed="#handleDashboardPageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Dashboard_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="65.0" layoutX="15.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Record_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="debtPage" fitHeight="53.0" fitWidth="65.0" layoutX="23.0" layoutY="203.0" onMousePressed="#handleDebtPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Debt_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="savingsPage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="292.0" onMousePressed="#handleSavingsPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Savings_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="walletPage" fitHeight="53.0" fitWidth="65.0" layoutX="24.0" layoutY="375.0" onMousePressed="#handleWalletPageClick" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                     <image>
+                        <Image url="@images/Account_Icon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="profilePage" fitHeight="53.0" fitWidth="65.0" layoutX="22.0" layoutY="467.0" onMousePressed="#handleProfilePageClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Profile_Icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow offsetX="5.0" spread="0.17">
+                     <color>
+                        <Color red="0.5263158082962036" green="0.5263158082962036" blue="0.5263158082962036" opacity="0.6200000047683716" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Label layoutX="128.0" layoutY="24.0" prefHeight="45.0" prefWidth="219.0" style="-fx-font-weight: Bold; -fx-font-size: 30; -fx-font-family: Poppins;" stylesheets="@style.css" text="Expenses">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="122.0" layoutY="260.0" prefHeight="264.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="10.0" offsetY="3.0" radius="7.25">
+                     <color>
+                        <Color opacity="0.7051671743392944" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="18.0" layoutY="11.0" prefHeight="17.0" prefWidth="98.0" stylesheets="@style.css" text="Expense History">
+                     <font>
+                        <Font name="Poppins Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="expenseTable" layoutX="24.0" layoutY="40.0" prefHeight="200.0" prefWidth="633.0">
+                     <columns>
+                        <TableColumn fx:id="WalletClmn" prefWidth="80.00001525878906" style="-fx-background-color: #ffcf87;" text="Wallet" />
+                        <TableColumn fx:id="CategoryClmn" prefWidth="139.20001220703125" style="-fx-background-color: #faf2a0;" text="Category" />
+                        <TableColumn fx:id="AmountClmn" prefWidth="122.4000244140625" style="-fx-background-color: #ffcf87;" text="Amount" />
+                        <TableColumn fx:id="DateClmn" prefWidth="115.99993896484375" style="-fx-background-color: #faf2a0;" text="Date" />
+                        <TableColumn fx:id="DescriptionClmn" minWidth="0.0" prefWidth="167.2000732421875" style="-fx-background-color: #ffcf87;" text="Description" />
+                     </columns></TableView>
+               </children>
+            </Pane>
+            <Button fx:id="submitBtn" layoutX="308.0" layoutY="178.0" mnemonicParsing="false" onAction="#saveExpense" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #fa6c52; -fx-background-radius: 20;" stylesheets="@style.css" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="amount" layoutX="444.0" layoutY="109.0" prefHeight="45.0" prefWidth="359.0" promptText="Amount">
+               <font>
+                  <Font name="Poppins Bold" size="23.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="description" layoutX="444.0" layoutY="175.0" prefHeight="51.0" prefWidth="359.0" promptText="Description (optional)">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </TextArea>
+            <ComboBox fx:id="categories" layoutX="128.0" layoutY="109.0" prefHeight="25.0" prefWidth="300.0" promptText="Category" style="-fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52); -fx-background-radius: 20; -fx-font-size: 15; -fx-padding: 5;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ComboBox fx:id="walletType" layoutX="128.0" layoutY="180.0" prefHeight="40.0" prefWidth="169.0" promptText="Account Type" style="-fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52); -fx-background-radius: 20; -fx-font-size: 15; -fx-padding: 5;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ImageView fx:id="profileIcon" fitHeight="45.0" fitWidth="54.0" layoutX="758.0" layoutY="24.0" pickOnBounds="true">
+               <image>
+                  <Image url="@uploads/default_profile.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="userName" alignment="CENTER_RIGHT" layoutX="567.0" layoutY="38.0" prefHeight="20.0" prefWidth="180.0" text="Name">
+               <font>
+                  <Font name="Poppins Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

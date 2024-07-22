@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #fcc326, #fa6c52);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateController">
+   <children>
+      <TextField fx:id="newUsername" layoutX="30.0" layoutY="46.0" prefHeight="26.0" prefWidth="340.0" promptText="Enter Username">
+         <font>
+            <Font name="Poppins Regular" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newEmail" layoutX="30.0" layoutY="94.0" prefHeight="26.0" prefWidth="340.0" promptText="Enter Email" />
+      <TextArea fx:id="newBio" layoutX="30.0" layoutY="152.0" prefHeight="94.0" prefWidth="340.0" promptText="Enter Bio" />
+      <Button fx:id="submitBtn" layoutX="176.0" layoutY="255.0" mnemonicParsing="false" onAction="#saveDetails" style="-fx-background-color: orange; -fx-border-color: white;" stylesheets="@style.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="30.0" layoutY="29.0" text="New Username:" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="134.0" text="New Bio:" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="78.0" text="New Email:" textFill="WHITE">
+         <font>
+            <Font name="Poppins Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

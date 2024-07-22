@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+#witit {
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 30px;
+}
+
+.choice-box .list-cell:selected {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#submitBtn:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#submitBtn1:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#debtPaid:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#deleteButton:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#completeButton:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#logOut:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#changePassword:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#dashboardPage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+
+#recordPage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+#savingsPage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+#debtPage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+#profilePage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+
+#walletPage:hover {
+   -fx-scale-x: 1.1;
+   -fx-scale-y: 1.1;
+}
+
+
+
+
